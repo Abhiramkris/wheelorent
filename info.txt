@@ -1,0 +1,47 @@
+table date has end and start dates
+table users have login signup
+userid is primary for users 
+renhours to calculate no of hours of rent
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+
+<?php echo $user_data['user_name']; ?>
+
+
+
+see this example and refer your code it works just fine for me 
+```<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="name"><br><br>
+  <input type="submit" name="submit" value="Submit">
+</form>
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['date_end'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    $timestamp=$_POST['date_end'];
+    $date = date('d', strtotime($timestamp));
+    echo $date;
+    
+  }
+  }
+
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['name'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>```
